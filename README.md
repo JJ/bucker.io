@@ -1,7 +1,7 @@
 # bucker.io
 Repo para el hackatón de IV 2025-26
 
-# Formulación del problema
+## Formulación del problema
 
 Cliente: Estudiante de Ingeniería, Ciencias o Humanidades de la Universidad de Granada.
 
