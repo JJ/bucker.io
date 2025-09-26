@@ -13,7 +13,6 @@ Dado que quieren minimizar su tiempo y coste empleado en lo relativo a los libro
 * **Verificación de disponibilidad**: La bibliografía no siempre está disponible en la biblioteca de la universidad o, si está, no se encuentra en forma de enlace directo al catálogo de la biblioteca. Si está en forma de enlace, puede estar caído.
 * **Distinción de la bibliografía esencial**: El exceso de bibliografía (incluso fundamental) supone un problema para la gestión del tiempo de estudio del cliente o incluso un problema económico si es necesario comprar algunos libros.
 * **Adecuación al idioma del estudiante**: Si la bibliografía recomendada está en un sólo idioma (inglés o español) puede ser un hándicap para estudiantes nativos en otro idioma.
-Ejemplo: Guías Docentes de Informática
 
 **Ejemplo**: Guías Docentes de Informática
 
