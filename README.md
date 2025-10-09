@@ -1,5 +1,5 @@
 # bucker.io
-![Logo bucker.io](img/logo.png)
+![Logo bucker.io](assets/logo.png)
 
 Repo para el hackatón de IV 2025-26
 
