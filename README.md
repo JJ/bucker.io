@@ -14,13 +14,6 @@ Dado que quieren minimizar su tiempo y coste empleado en lo relativo a los libro
 * **Distinción de la bibliografía esencial**: El exceso de bibliografía (incluso fundamental) supone un problema para la gestión del tiempo de estudio del cliente o incluso un problema económico si es necesario comprar algunos libros.
 * **Adecuación al idioma del estudiante**: Si la bibliografía recomendada está en un sólo idioma (inglés o español) puede ser un hándicap para estudiantes nativos en otro idioma.
 
-**Ejemplo**: Guías Docentes de Informática
-
-En la [Guía Docente](https://www.ugr.es/estudiantes/grados/grado-ingenieria-informatica/sistemas-operativos/guia-docente) de la asignatura de Sistemas Operativos del Grado en Informática, notamos como:
-
-- En algunos libros se utiliza la notación "3/e" para indicar la tercera edición de un libro mientras que en otro caso, se usa la notación (2 ed.). En otras guías docentes, se escribe directamente "3ª edición" o en inglés 2nd edition.
-- Aparece un libro repetido (M. Kerrisk, The Linux Programming Interface, No Starch Press , 2010) en la bibliografía fundamental y en la complementaria. En un caso, con el autor M. Kerrisk (nombre correcto), y en otro con el autor Michael Kerrish. (¿Errata?).
-- En ningún caso, se enlaza al catálogo de la biblioteca, debiendo de buscar el libro manualmente en Gratensis para verificar su disponibilidad.
 
 En la [Guía Docente](https://www.ugr.es/estudiantes/grados/grado-ingenieria-informatica/computacubicua-inteligambiental-etecnolinf/guia-docente) de la asignatura de Computación Ubicua e Inteligencia Ambiental del Grado en Informática, notamos como:
 
