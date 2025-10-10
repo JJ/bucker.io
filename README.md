@@ -1,4 +1,6 @@
 # bucker.io
+[Logo bucker.io](assets/logo.png)
+
 Repo para el hackatón de IV 2025-26
 
 ## Formulación del problema
@@ -20,3 +22,4 @@ En la [Guía Docente](https://www.ugr.es/estudiantes/grados/grado-ingenieria-inf
 - Toda la bibliografía está en inglés.
 - 2 de los 6 libros recomendados (Pervasive systems and ubiquitous computing y Ambient Intelligence) no están disponibles en la biblioteca de la universidad.
 - En particular, el primer libro tiene un precio de 138€.
+
