@@ -12,7 +12,7 @@ Dado que quieren minimizar su tiempo y coste empleado en lo relativo a los libro
 * **Identificación de ejemplares**: El estudiante quiere poder identificar de forma inequívoca los ejemplares para comprarlos o tomarlos en préstamo.
 * **Verificación de disponibilidad**: La bibliografía no siempre está disponible en la biblioteca de la universidad o, si está, no se encuentra en forma de enlace directo al catálogo de la biblioteca. Si está en forma de enlace, puede estar caído.
 * **Distinción de la bibliografía esencial**: El exceso de bibliografía (incluso fundamental) supone un problema para la gestión del tiempo de estudio del cliente o incluso un problema económico si es necesario comprar algunos libros.
-* **Adecuación al idioma del estudiante**: Si la bibliografía recomendada está en un sólo idioma (inglés o español) puede ser un hándicap para estudiantes nativos en otro idioma.
+* **Libros en diferentes idiomas**: Una bibliografía que contiene libros cuyo idioma no entienden los estudiantes dificulta la búsqueda de información para la asignatura.
 
 
 En la [Guía Docente](https://www.ugr.es/estudiantes/grados/grado-ingenieria-informatica/computacubicua-inteligambiental-etecnolinf/guia-docente) de la asignatura de Computación Ubicua e Inteligencia Ambiental del Grado en Informática, notamos como:
