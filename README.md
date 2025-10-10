@@ -9,7 +9,7 @@ Repo para el hackatón de IV 2025-26
 
 Dado que quieren minimizar su tiempo y coste empleado en lo relativo a los libros, los estudiantes se encuentran con los siguientes problemas:
 
-* **Extracción de atributos**: La bibliografía recomendada se presenta en formato de texto plano, en lugar de tener un formato estructurado para los atributos de los libros como título, autor, editorial, año de publicación, ISBN, etc.
+* **Identificación de ejemplares**: El estudiante quiere poder identificar de forma inequívoca los ejemplares para comprarlos o tomarlos en préstamo.
 * **Verificación de disponibilidad**: La bibliografía no siempre está disponible en la biblioteca de la universidad o, si está, no se encuentra en forma de enlace directo al catálogo de la biblioteca. Si está en forma de enlace, puede estar caído.
 * **Distinción de la bibliografía esencial**: El exceso de bibliografía (incluso fundamental) supone un problema para la gestión del tiempo de estudio del cliente o incluso un problema económico si es necesario comprar algunos libros.
 * **Adecuación al idioma del estudiante**: Si la bibliografía recomendada está en un sólo idioma (inglés o español) puede ser un hándicap para estudiantes nativos en otro idioma.
