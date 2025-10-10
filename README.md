@@ -3,6 +3,10 @@
 
 Repo para el hackatón de IV 2025-26
 
+## TL;DR
+
+bucker.io es una herramienta diseñada para ayudar a los estudiantes de la Universidad de Granada a gestionar la bibliografía de sus asignaturas. El objetivo es ahorrar tiempo y reducir inconveniencias, facilitando el acceso a los recursos académicos.
+
 ## Formulación del problema
 
 **Cliente**: Estudiante de Ingeniería, Ciencias o Humanidades de la Universidad de Granada.
