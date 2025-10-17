@@ -3,14 +3,6 @@ description: Plantilla para definir una nueva historia de usuario.
 title: "[USER STORY] <Título descriptivo>"
 labels: ["Historia de Usuario"]
 body:
-  - type: textarea
-    id: contexto
-    attributes:
-      label: Contexto
-      description: Explica brevemente el problema o necesidad detectada.
-      placeholder: "Ejemplo: Los usuarios no pueden guardar sus preferencias de perfil."
-    validations:
-      required: true
 
   - type: textarea
     id: historia
@@ -21,18 +13,3 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: criterios
-    attributes:
-      label: Criterios de aceptación
-      description: Lista los criterios que deben cumplirse para considerar completada la historia.
-      placeholder: |
-        - Se puede guardar el idioma seleccionado.
-        - Se recuerda la preferencia al iniciar sesión.
-      render: markdown
-
-  - type: textarea
-    id: notas
-    attributes:
-      label: Notas adicionales
-      description: Información relevante, dependencias o decisiones de diseño.
