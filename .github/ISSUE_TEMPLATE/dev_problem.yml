@@ -1,0 +1,27 @@
+name: 🧠 Problema en el desarrollo
+description: Usa esta plantilla para reportar bloqueos, dudas técnicas o dificultades encontradas durante el desarrollo.
+title: "[DEV PROBLEM] <Título del problema>"
+labels: ["help wanted"]
+body:
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción del problema
+      description: Explica qué obstáculo o dificultad estás enfrentando.
+      placeholder: "No consigo conectar la base de datos MongoDB al servidor Express."
+    validations:
+      required: true
+
+  - type: textarea
+    id: intentos
+    attributes:
+      label: Intentos realizados
+      description: Explica qué has probado hasta ahora para solucionarlo.
+      placeholder: "He revisado la URI en .env y probado distintas configuraciones de mongoose.connect()..."
+
+  - type: textarea
+    id: ayuda
+    attributes:
+      label: Qué tipo de ayuda necesitas
+      description: Describe qué esperas del equipo o de los mentores.
+      placeholder: "Revisión del código de conexión o ayuda para depurar el error."
