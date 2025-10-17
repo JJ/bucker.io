@@ -1,5 +1,8 @@
 # bucker.io
 
+
+[![state: en desarrollo](https://img.shields.io/badge/state-en%20desarrollo-yellow)](README.md)
+
 ![Logo bucker.io](assets/logo.png)
 
 Repo para el hackatón de IV 2025-26
