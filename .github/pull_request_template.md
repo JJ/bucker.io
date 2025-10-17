@@ -1,6 +1,6 @@
 ## Descripción
 
-Por favor, describe los cambios realizados en este Pull Request.
+<!-- Por favor, describe los cambios realizados en este Pull Request. -->
 
 ## Issue relacionado
 
