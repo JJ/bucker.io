@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "bucker.io"
-version = "0.1.0"
+version = "0.0.1"
 description = "Repo para el hackatón de IV 2025-26"
 authors = [
   { name = "JJ", email = "jj@ejemplo.com" }
