@@ -7,3 +7,5 @@ Aquí se especifican las normas y políticas que se deben seguir en nuestro proy
 - No se abrirán PR que no describan un issue.
 - Los PR deben de hacer referencia al issue concreto que cierran, usando palabras clave como, por ejemplo: "Closes #1", donde #1 es el número del issue que cierra.
 - Todo el código que se añada nuevo debe de ser coherente con el ya existente.
+
+- Como gestor de dependencias se usará poetry
