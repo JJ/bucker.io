@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mi_proyecto"
+version = "0.1.0"
+description = "Repo para el hackatón de IV 2025-26"
+authors = [
+  { name = "JJ", email = "jj@ejemplo.com" }
+]
+readme = "README.md"
+license = { text = "AGPL-3.0-only" }
+requires-python = ">=3.9"
+
+dependencies = [
+
+]
+
+[project.optional-dependencies]
+dev = [
+
+]
+
+[project.urls]
+"Homepage" = "https://github.com/JJ/bucker.io"
+"Bug Tracker" = "https://github.com/JJ/bucker.io/issues"
