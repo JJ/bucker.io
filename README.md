@@ -24,6 +24,8 @@ Dado que quieren minimizar su tiempo y coste empleado en lo relativo a los libro
 * **Distinción de la bibliografía esencial**: El exceso de bibliografía (incluso fundamental) supone un problema para la gestión del tiempo de estudio del cliente o incluso un problema económico si es necesario comprar algunos libros.
 * **Libros en diferentes idiomas**: Una bibliografía que contiene libros cuyo idioma no entienden los estudiantes dificulta la búsqueda de información para la asignatura.
 
+## ADR
+Pueden consultarse los Architecture Decision Record en la [Wiki](https://github.com/JJ/bucker.io/wiki). Existe una [Plantilla para la creción de ADR](https://github.com/JJ/bucker.io/wiki/PLANTILLA-PARA-LOS-%E2%80%90--%5BADR%5D-Architecture-Decision-Record.) que debe ser estandar para la creación de nuevos.
 
 En la [Guía Docente](https://www.ugr.es/estudiantes/grados/grado-ingenieria-informatica/computacubicua-inteligambiental-etecnolinf/guia-docente) de la asignatura de Computación Ubicua e Inteligencia Ambiental del Grado en Informática, notamos como:
 
