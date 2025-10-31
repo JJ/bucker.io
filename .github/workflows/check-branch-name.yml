@@ -1,0 +1,113 @@
+name: Validar nombre de rama
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  pull-requests: write
+  issues: write
+
+jobs:
+  check-branch-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validar formato del nombre de la rama
+        id: validate
+        run: |
+          # Obtener información del PR
+          BRANCH_NAME="${{ github.head_ref }}"
+          PR_AUTHOR="${{ github.event.pull_request.user.login }}"
+          
+          echo "Rama: $BRANCH_NAME"
+          echo "Autor del PR: $PR_AUTHOR"
+          
+          # Patrón: username-descripcion-issueNumber
+          # El nombre de usuario debe coincidir con el autor del PR
+          # La descripción puede tener cualquier número de palabras separadas por guiones
+          # Debe terminar con un número de issue
+          
+          # Verificar formato básico: username-descripcion-number
+          # La descripción debe tener al menos una palabra
+          if [[ ! "$BRANCH_NAME" =~ ^[a-zA-Z0-9_]+-[a-zA-Z0-9_-]+-[0-9]+$ ]]; then
+            echo "ERROR=true" >> $GITHUB_OUTPUT
+            echo "MESSAGE=❌ El nombre de la rama no sigue el patrón requerido." >> $GITHUB_OUTPUT
+            echo "DETAILS<<EOF" >> $GITHUB_OUTPUT
+            echo "El nombre de la rama debe seguir el formato: \`username-descripcion-issueNumber\`" >> $GITHUB_OUTPUT
+            echo "" >> $GITHUB_OUTPUT
+            echo "Donde:" >> $GITHUB_OUTPUT
+            echo "- \`username\` es tu nombre de usuario de GitHub" >> $GITHUB_OUTPUT
+            echo "- \`descripcion\` es una breve descripción con palabras separadas por guiones" >> $GITHUB_OUTPUT
+            echo "- \`issueNumber\` es el número del issue que resuelve" >> $GITHUB_OUTPUT
+            echo "" >> $GITHUB_OUTPUT
+            echo "**Ejemplos válidos:**" >> $GITHUB_OUTPUT
+            echo "- \`jacarmona-fix-33\`" >> $GITHUB_OUTPUT
+            echo "- \`jacarmona-anadir-documentacion-33\`" >> $GITHUB_OUTPUT
+            echo "- \`alice-fix-broken-link-42\`" >> $GITHUB_OUTPUT
+            echo "" >> $GITHUB_OUTPUT
+            echo "**Tu rama:** \`$BRANCH_NAME\`" >> $GITHUB_OUTPUT
+            echo "" >> $GITHUB_OUTPUT
+            echo "Por favor, renombra tu rama y vuelve a abrir el pull request." >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+          
+          # Extraer el nombre de usuario de la rama (primera parte antes del primer guión)
+          BRANCH_USER=$(echo "$BRANCH_NAME" | cut -d'-' -f1)
+          
+          # Convertir ambos a minúsculas para comparación case-insensitive
+          BRANCH_USER_LOWER=$(echo "$BRANCH_USER" | tr '[:upper:]' '[:lower:]')
+          PR_AUTHOR_LOWER=$(echo "$PR_AUTHOR" | tr '[:upper:]' '[:lower:]')
+          
+          if [[ "$BRANCH_USER_LOWER" != "$PR_AUTHOR_LOWER" ]]; then
+            echo "ERROR=true" >> $GITHUB_OUTPUT
+            echo "MESSAGE=❌ El nombre de usuario en la rama no coincide con el autor del PR." >> $GITHUB_OUTPUT
+            echo "DETAILS<<EOF" >> $GITHUB_OUTPUT
+            echo "El nombre de la rama debe comenzar con tu nombre de usuario de GitHub." >> $GITHUB_OUTPUT
+            echo "" >> $GITHUB_OUTPUT
+            echo "**Usuario esperado:** \`$PR_AUTHOR\`" >> $GITHUB_OUTPUT
+            echo "**Usuario en la rama:** \`$BRANCH_USER\`" >> $GITHUB_OUTPUT
+            echo "" >> $GITHUB_OUTPUT
+            echo "Por favor, renombra tu rama para que comience con \`$PR_AUTHOR\` y vuelve a abrir el pull request." >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+            exit 1
+          fi
+          
+          # Verificar que el issue number al final existe
+          ISSUE_NUMBER=$(echo "$BRANCH_NAME" | grep -oE '[0-9]+$')
+          echo "Número de issue detectado: $ISSUE_NUMBER"
+          
+          echo "✅ El nombre de la rama es válido."
+          echo "ERROR=false" >> $GITHUB_OUTPUT
+
+      - name: Comentar en el PR si hay error
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const message = `${{ steps.validate.outputs.MESSAGE }}
+            
+            ${{ steps.validate.outputs.DETAILS }}
+            
+            ---
+            
+            Consulta [CONTRIBUTING.md](https://github.com/${{ github.repository }}/blob/main/CONTRIBUTING.md) para más información sobre las normas de contribución.`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: message
+            });
+
+      - name: Cerrar el PR si hay error
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.pulls.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              state: 'closed'
+            });
