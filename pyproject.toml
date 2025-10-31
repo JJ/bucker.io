@@ -1,0 +1,16 @@
+[build-system]
+
+[project]
+name = "bucker.io"
+version = "0.0.1"
+description = "Repo para el hackatón de IV 2025-26"
+authors = [
+  { name = "JJ", email = "jj@ejemplo.com" }
+]
+readme = "README.md"
+license = { text = "AGPL-3.0-only" }
+requires-python = ">=3.9"
+
+[project.urls]
+"Homepage" = "https://github.com/JJ/bucker.io"
+"Bug Tracker" = "https://github.com/JJ/bucker.io/issues"
