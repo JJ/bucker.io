@@ -22,29 +22,28 @@ jobs:
           echo "Rama: $BRANCH_NAME"
           echo "Autor del PR: $PR_AUTHOR"
           
-          # Patrón: username-word1-word2-[word3-]issueNumber
+          # Patrón: username-descripcion-issueNumber
           # El nombre de usuario debe coincidir con el autor del PR
-          # La descripción debe tener 2-3 palabras separadas por guiones
+          # La descripción puede tener cualquier número de palabras separadas por guiones
           # Debe terminar con un número de issue
           
-          # Verificar formato básico: al menos username-word1-word2-number (4 partes)
-          # y máximo username-word1-word2-word3-number (5 partes)
-          if [[ ! "$BRANCH_NAME" =~ ^[a-zA-Z0-9_]+-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+-[0-9]+$ ]] && \
-             [[ ! "$BRANCH_NAME" =~ ^[a-zA-Z0-9_]+-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+-[a-zA-Z0-9_]+-[0-9]+$ ]]; then
+          # Verificar formato básico: username-descripcion-number
+          # La descripción debe tener al menos una palabra
+          if [[ ! "$BRANCH_NAME" =~ ^[a-zA-Z0-9_]+-[a-zA-Z0-9_-]+-[0-9]+$ ]]; then
             echo "ERROR=true" >> $GITHUB_OUTPUT
             echo "MESSAGE=❌ El nombre de la rama no sigue el patrón requerido." >> $GITHUB_OUTPUT
             echo "DETAILS<<EOF" >> $GITHUB_OUTPUT
-            echo "El nombre de la rama debe seguir el formato: \`username-palabra1-palabra2-issueNumber\`" >> $GITHUB_OUTPUT
-            echo "o \`username-palabra1-palabra2-palabra3-issueNumber\`" >> $GITHUB_OUTPUT
+            echo "El nombre de la rama debe seguir el formato: \`username-descripcion-issueNumber\`" >> $GITHUB_OUTPUT
             echo "" >> $GITHUB_OUTPUT
             echo "Donde:" >> $GITHUB_OUTPUT
             echo "- \`username\` es tu nombre de usuario de GitHub" >> $GITHUB_OUTPUT
-            echo "- La descripción tiene 2-3 palabras separadas por guiones" >> $GITHUB_OUTPUT
+            echo "- \`descripcion\` es una breve descripción con palabras separadas por guiones" >> $GITHUB_OUTPUT
             echo "- \`issueNumber\` es el número del issue que resuelve" >> $GITHUB_OUTPUT
             echo "" >> $GITHUB_OUTPUT
             echo "**Ejemplos válidos:**" >> $GITHUB_OUTPUT
-            echo "- \`jacarmona-anadir-documentacion-33\` (2 palabras + issue)" >> $GITHUB_OUTPUT
-            echo "- \`alice-fix-broken-link-42\` (3 palabras + issue)" >> $GITHUB_OUTPUT
+            echo "- \`jacarmona-fix-33\`" >> $GITHUB_OUTPUT
+            echo "- \`jacarmona-anadir-documentacion-33\`" >> $GITHUB_OUTPUT
+            echo "- \`alice-fix-broken-link-42\`" >> $GITHUB_OUTPUT
             echo "" >> $GITHUB_OUTPUT
             echo "**Tu rama:** \`$BRANCH_NAME\`" >> $GITHUB_OUTPUT
             echo "" >> $GITHUB_OUTPUT
