@@ -7,3 +7,4 @@ Aquí se especifican las normas y políticas que se deben seguir en nuestro proy
 - No se abrirán PR que no describan un issue.
 - Los PR deben de hacer referencia al issue concreto que cierran, usando palabras clave como, por ejemplo: "Closes #1", donde #1 es el número del issue que cierra.
 - Todo el código que se añada nuevo debe de ser coherente con el ya existente.
+- Todo el código que se añada debe pasar los test automáticos del linter [ADR-001](https://github.com/JJ/bucker.io/wiki/%5BADR%5D-Elecci%C3%B3n-del-linter-del-repositorio.).
