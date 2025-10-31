@@ -1,0 +1,13 @@
+name: 💬 Dudas generales
+description: Usa esta plantilla para preguntas o comentarios fuera del desarrollo.
+title: "[General] <Título de la duda>"
+labels: ["question"]
+body:
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción de la duda
+      description: Describe la duda o comentario que tienes.
+      placeholder: "Tengo una duda sobre qué tecnologías se usan en el proyecto."
+    validations:
+      required: true
