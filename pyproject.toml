@@ -5,7 +5,9 @@ name = "bucker.io"
 version = "0.0.1"
 description = "Repo para el hackatón de IV 2025-26"
 authors = [
-  { name = "JJ", email = "jj@ejemplo.com" }
+  { name = "Gabriel Sánchez Muñoz", email = "gabrielfranciscosm@gmail.com" },
+  { name = "Jorge López Molina", email = "e.jorgelpz@go.ugr.es" },
+  { name = "José Antonio Carmona Molina", email = "e.jacarmona@go.ugr.es" }
 ]
 readme = "README.md"
 license = { text = "AGPL-3.0-only" }
