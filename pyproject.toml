@@ -1,6 +1,4 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.build_meta"
 
 [project]
 name = "bucker.io"
@@ -12,15 +10,6 @@ authors = [
 readme = "README.md"
 license = { text = "AGPL-3.0-only" }
 requires-python = ">=3.9"
-
-dependencies = [
-
-]
-
-[project.optional-dependencies]
-dev = [
-
-]
 
 [project.urls]
 "Homepage" = "https://github.com/JJ/bucker.io"
